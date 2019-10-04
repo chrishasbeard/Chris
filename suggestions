@@ -1,0 +1,18 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello user what are you in the mood for?");
+		Console.WriteLine("1) action, 2) chilling, 3)danger, 4) good food");
+		string val;
+Console.Write("Enter activity option: ");
+val = Console.ReadLine();
+		int a = Convert.ToInt32(val);
+		if (val >= 4)
+		{
+			
+		}
+	}
+}
