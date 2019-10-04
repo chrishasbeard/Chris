@@ -1,0 +1,95 @@
+using System;
+using System.Globalization;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("1st dollar amount");
+        double x = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("2nd dollar amount");
+        double y = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("3rd dollar amount");
+        double z = Convert.ToDouble(Console.ReadLine());
+
+        double total;
+        double average;
+        total = (z + y + x);
+        average = (total / 3);
+        //Console.WriteLine((double)average);
+
+
+        Console.WriteLine("The Average " + average);
+
+        // smallest
+        if (x < y)
+        {
+            if (x < z)
+            {
+                Console.WriteLine("The samllest " + x);
+            }
+        }
+        else
+            if (y < x)
+        {
+            if (y < z) ;
+            {
+                Console.WriteLine("The smallest " + y);
+            }
+        }
+
+        else
+            if (z < x)
+        {
+            if (z < y) ;
+            {
+                Console.WriteLine("The samllest " + z);
+            }
+        }
+
+        // largest
+
+        if (z > y)
+        {
+            if (z > x) ;
+            {
+                Console.WriteLine("The Largest " + z);
+            }
+        }
+
+        else
+        if (x > y)
+        {
+            if (x > z) ;
+            {
+                Console.WriteLine("The largest " + x);
+            }
+        }
+
+        else
+        if (y > x)
+        {
+            if (y > z) ;
+            {
+                Console.WriteLine("The Largest " + y);
+            }
+        }
+
+
+
+        string USmoney = string.Format("US: {0:C} ", "$" + total);
+        Console.WriteLine(USmoney);
+
+        string SWmoney = string.Format("Swedish:{0:C} ", total + "kr");
+        Console.WriteLine(SWmoney);
+
+        string JPmoney = string.Format("Japanese: ", "¥" + total);
+        Console.WriteLine(JPmoney);
+
+        string Thaimoney = string.Format("Thai:{0:C} ", average);
+        Console.WriteLine(Thaimoney);
+
+    }
+}
