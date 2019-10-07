@@ -1,0 +1,95 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string inputString = string.Empty;
+		string output1 = string.Empty;
+		do
+		{	
+			//Prompt the user
+			Console.WriteLine("Hello user, what are you in the mood for?");
+			Console.WriteLine("Here are your options:");
+			Console.WriteLine("1) Action");
+			Console.WriteLine("2) Chill Times");
+			Console.WriteLine("3) Danger");
+			Console.WriteLine("4) Food");
+			//Ask for input
+			string input1 = Console.ReadLine();
+
+			//Determine if output1 should change
+			if (input1 == "1")
+			{
+				inputString = "Action";
+				output1 = "stock car racing";
+			}
+			else if (input1 == "2")
+			{
+				inputString = "Chill Times";
+				output1 = "go on a hike";
+			}
+			else if (input1 == "3")
+			{
+				inputString = "Danger";
+				output1 = "skydiving";
+			}
+			else if (input1 == "4")
+			{
+				inputString = "Food";
+				output1 = "good food";
+			}
+			else {
+				Console.WriteLine("Input Not Recognized, Please Choose From Listed Options.");
+			}
+		}
+				
+		while(output1 == string.Empty );
+
+		string output2 = string.Empty;
+		string input2 = string.Empty;
+		do 
+		{
+			Console.WriteLine("How many people are you bringing with you?");
+
+			int i = 0;   
+			input2 = Console.ReadLine();  
+			bool result = int.TryParse(input2, out i); 
+			if (result)
+			{ 
+
+				if (i < 0 )
+				{
+					Console.WriteLine("I do not understand");
+				}
+				else if	( i == 0)
+				{
+					output2 = "use your sneakers";
+				}
+				else if ( i < 5 )
+				{
+					output2 = "drive a car";
+				}
+				else if (i <=10 )
+				{
+					output2 = "take a VW bus";
+				}
+				else if (i > 11 )
+				{
+					output2 = "take an airplane";
+				}
+	 		}
+
+			else if (!result)
+			{
+				Console.WriteLine("I do not understand");
+			}
+		}
+		while (output2 == string.Empty);
+
+		Console.WriteLine("Okay so you're in the mood for " + inputString + " so you should do " + output1 + 
+						  " and since you're bringing " + input2 + " people you should drive a " + output2 + ".");
+		Console.WriteLine("Goodbye.");
+
+	}
+}
