@@ -1,0 +1,83 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+	
+			
+		Console.WriteLine("Hello user, what are you in the mood for?");
+		Console.WriteLine("Here are your options:");
+		Console.WriteLine("1) Action");
+		Console.WriteLine("2) Chill Times");
+		Console.WriteLine("3) Danger");
+		Console.WriteLine("4) Food");
+		
+		string output1 = string.Empty;
+		string input1 = Console.ReadLine(); 
+		
+		do {
+			{		
+						if (input1 == "1")
+						{
+							output1 = "stock car racing";
+						}
+						if (input1 == "2")
+						{
+							output1 = "go on a hike";
+						}
+						if (input1 == "3")
+						{
+							output1 = "skydiving";
+						}
+						if (input1 == "4")
+						{
+							output1 = "good food";
+						}
+			}}
+				
+		while(output1 == string.Empty );
+
+			Console.WriteLine("How many people are you bringing with you?");
+
+			int i = -1;   
+			string input2 = Console.ReadLine();  
+			bool result = int.TryParse(input2, out i); 
+			string output2 = string.Empty;
+			if (result)
+			{ 
+
+				if (i < 0 )
+						{
+							Console.WriteLine("I do not understand");
+						}
+						else if	( i == 0)
+						{
+							output2 = "use your sneakers";
+						}
+						else if ( i < 5 )
+						{
+							output2 = "drive a car";
+						}
+						else if (i <=10 )
+						{
+							output2 = "take a VW bus";
+						}
+						else if (i > 11 )
+						{
+							output2 = "take an airplane";
+						}
+	 		}
+
+			else if (!result)
+			{
+			Console.WriteLine("I do not understand");
+			}
+
+			Console.WriteLine("Okay so you're in the mood for " + input1 + " so you should do " + output1 + 
+							  " and since you're bringing " + input2 + " people you should drive a " + output2 + ".");
+			Console.WriteLine("Goodbye.");
+
+			}
+}
